@@ -19,8 +19,8 @@
 
 				<!-- Header -->
 					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
+						<div class="sh-logo">
+							<img src="images/sh-logo-black.png">
 						</div>
 						<div class="content">
 							<div class="inner">
@@ -30,16 +30,57 @@
 								Check out some of my web applications below and feel free to connect with me</p>
 							</div>
 						</div>
-						<nav>
-							<ul>
-								<li><a href="#intro">About Me</a></li>
-								<li><a href="#work">Applications</a></li>
-								<li><a href="#about">Experience</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!--<li><a href="#elements">Elements</a></li>-->
-							</ul>
-						</nav>
 					</header>
+
+					<body>
+						<section>
+							<h2>About Me</h2>
+							<p> I thrive on creating elegant, user-friendly solutions that solve real-world problems. <br/>
+							Beyond coding, I find inspiration in the beauty of art, whether it's painting abstract flowers or capturing city skylines.<br/>
+							My love for cultural immersion drives me to explore local restaurants, discover hidden gems, and engage with diverse communities while traveling.<br/>
+							When not in front of a computer screen, you'll find me enjoying serene walks along the East River with my dog.<br/>
+							With an open mind and a dedication to simplifying complicated things, my goal is to make a positive impact by creating solutions that make life easier for others.<br/><br/>
+							Join me on this exciting journey of combining technology, creativity, and a touch of wanderlust.</p>
+						</section>
+
+						<section>
+							<h2>Skills</h2>
+							<ul class="skill-icons">
+								<li><img src="images/skill_icons/icons8-docker-128.png" alt="Docker logo" title="Docker" href="https://docs.docker.com/"></li>
+								<li><img src="images/skill_icons/icons8-git-100.png" alt="Git logo" title="Git" href="https://git-scm.com/"></li>
+								<li><img src="images/skill_icons/icons8-github-128.png" alt="Github logo" title="GitHub" href="https://docs.github.com/en"></li>
+								<li><img src="images/skill_icons/icons8-ruby-on-rails-128.png" alt="Ruby on Rails logo" title="Ruby on Rails" href="https://rubyonrails.org/"></li>
+								<li><img src="images/skill_icons/icons8-ruby-100.png" alt="Ruby logo" title="Ruby" href="https://www.ruby-lang.org/en/"></li>
+								<li><img src="images/skill_icons/icons8-javascript-128.png" alt="JavaScript logo" title="JavaScript" href="https://www.javascript.com/"></li>
+								<li><img src="images/skill_icons/icons8-react-100.png" alt="React logo" title="React" href="https://react.dev/"></li>
+								<li><img src="images/skill_icons/icons8-redux-100.png" alt="Redux logo" title="Redux" href="https://redux.js.org/"></li>
+								<li><img src="images/skill_icons/icons8-mongodb-144.png" alt="MongoDB logo" title="MongoDB" href="https://www.mongodb.com/"></li>
+								<li><img src="images/skill_icons/icons8-postgresql-100.png" alt="PostgreSQL logo" title="PostgreSQL" href="https://www.postgresql.org/"></li>
+								<li><img src="images/skill_icons/icons8-css3-128.png" alt="CSS logo" title="CSS" href="https://www.css3.com/"></li>
+								<li><img src="images/skill_icons/icons8-html-5-128.png" alt="HTML logo" title="HTML" href="https://html.com/"></li>
+							</ul>
+						</section>
+
+						<section>
+							<h2>Applications</h2>
+							<p class="castle-bnb">
+								<a href="">CastleBnb</a> is a full stack AirBnb clone based on Game of Thrones castles that allows users to browse and book stays.
+								<br/>
+								A Ruby on Rails backend with a PostgreSQL databse, connected to a React front-end utilizing Redux state management and hosted on Google Cloud Run. 
+							</p>
+							<p class="oh-the-places">
+								<a href="">Oh! The Places We Go</a> is a frontend application that allows users to select a country and see population data fetched from a UN API.
+								<br/>
+								A Vanilla DOM frontend with public API calls to the United Nations Population Division.
+							</p>
+							<p class="tripit">
+								<a href="">TripIt</a> is a full-stack application that allows users to create a trip itinerary and add activities to their trip.
+								<br/>
+								A MERN stack application with a MongoDB database, Express and Node.js backend, and React frontend hosted on MongoDB Atlas and Render.
+							</p>
+						</section>
+					</body>
+
 
 				<!-- Main -->
 					<div id="main">
@@ -49,6 +90,10 @@
 								<h2 class="major">About Me</h2>
 								<span class="image main"><img src="images/flower1.jpg" alt="" />
 								</span>
+								<p>Hi, I am Shawna and I am a software engineer. I love working on data visualizations and finding new ways to creatively show data.</p>
+								<p>I have built a few full stack web applications and love a good theme.</p>
+								<p></p>
+
 								<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu. Proin aliquam facilisis ante interdum congue. Integer mollis, nisl amet convallis, porttitor magna ullamcorper, amet egestas mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id euismod egestas. By the way, check out my <a href="#work">awesome work</a>.</p>
 								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis dapibus rutrum facilisis. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Etiam tristique libero eu nibh porttitor fermentum. Nullam venenatis erat id vehicula viverra. Nunc ultrices eros ut ultricies condimentum. Mauris risus lacus, blandit sit amet venenatis non, bibendum vitae dolor. Nunc lorem mauris, fringilla in aliquam at, euismod in lectus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In non lorem sit amet elit placerat maximus. Pellentesque aliquam maximus risus, vel sed vehicula.</p>
 								<p id="imgfooter" class="copyright">
@@ -57,20 +102,27 @@
 							</article>
 
 						<!-- Work -->
+
+						
 							<article id="work">
 								<h2 class="major">Applications</h2>
 								<span class="image main"><img src="images/flower4.jpg" alt="" /></span>
-								<p>
-									<a>CastleBnb</a> is a full stack AirBnb clone based on Game of Thrones castles that allows users to browse and book stays.
+								<p class="castle-bnb">
+									<a href="">CastleBnb</a> is a full stack AirBnb clone based on Game of Thrones castles that allows users to browse and book stays.
 									<br/>
 									A Ruby on Rails backend with a PostgreSQL databse, connected to a React front-end utilizing Redux state management and hosted on Google Cloud Run. 
 								</p>
 								<p>
-									<a href=""></a>
+									<a href="">Oh! The Places We Go</a> is a frontend application that allows users to select a country and see population data fetched from a UN API.
+									<br/>
+									A Vanilla DOM frontend with public API calls to the United Nations Population Division.
 								</p>
-
-								<p>Adipiscing magna sed dolor elit. Praesent eleifend dignissim arcu, at eleifend sapien imperdiet ac. Aliquam erat volutpat. Praesent urna nisi, fringila lorem et vehicula lacinia quam. Integer sollicitudin mauris nec lorem luctus ultrices.</p>
-								<p>Nullam et orci eu lorem consequat tincidunt vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus pharetra. Pellentesque condimentum sem. In efficitur ligula tate urna. Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor. Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis libero. Mauris aliquet magna magna sed nunc rhoncus amet feugiat tempus.</p>
+								<p>
+									<a href="">TripIt</a> is a full-stack application that allows users to create a trip itinerary and add activities to their trip.
+									<br/>
+									A MERN stack application with a MongoDB database, Express and Node.js backend, and React frontend hosted on MongoDB Atlas and Render.
+								</p>
+								
 							</article>
 
 						<!-- About -->
@@ -171,7 +223,7 @@
 							</article>
 
 						<!-- Elements -->
-							<article id="elements">
+							<!-- <article id="elements">
 								<h2 class="major">Elements</h2>
 
 								<section>
@@ -410,7 +462,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 									</form>
 								</section>
 
-							</article>
+							</article> -->
 
 					</div>
 

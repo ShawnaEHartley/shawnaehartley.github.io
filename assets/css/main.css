@@ -1668,3 +1668,26 @@ input, select, textarea {
 		body.is-preload #footer {
 			opacity: 0;
 		}
+
+
+/* Shawna Edits	 */
+
+.sh-logo img {
+	filter: invert(100%);
+}
+
+.skill-icons {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.skill-icons li {
+	list-style: none;
+
+}
+
+.skill-icons li img {
+	height: 40px;
+} 
