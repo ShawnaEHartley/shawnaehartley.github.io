@@ -1695,9 +1695,9 @@ input, select, textarea {
 
 .skill-icons {
 	display: flex;
-	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+	flex-wrap: wrap;
 }
 
 .skill-icons li {
@@ -1712,8 +1712,14 @@ input, select, textarea {
 
 .application-grid {
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-columns: repeat(3, min-content);
 	grid-gap: 1rem;
+}
+
+@media (max-width: 767px) {
+	.application-grid {
+		grid-template-columns: 1fr; /* Display elements in a single column */
+	}
 }
 
 /* Flip Card Functionality */
@@ -1779,7 +1785,7 @@ input, select, textarea {
 }
 
 .experience-item {
-	margin: 0 7rem;
+	margin: 0 2rem;
 }
 .experience-list {
 	text-align: left	;
