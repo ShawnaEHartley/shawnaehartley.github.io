@@ -1758,6 +1758,10 @@ input, select, textarea {
 	color: black;
 }
 
+.flip-card-front img {
+	filter: sepia(80%) saturate(50%) brightness(80%);
+}
+
 .flip-card-back {
 	background-color: #1b1f22;
 	color: white;
@@ -1772,4 +1776,11 @@ input, select, textarea {
 }
 .project-details {
 	font-size: 75%;
+}
+
+.experience-item {
+	margin: 0 7rem;
+}
+.experience-list {
+	text-align: left	;
 }
