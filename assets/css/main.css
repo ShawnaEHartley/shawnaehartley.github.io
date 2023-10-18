@@ -176,20 +176,23 @@ h6 { font-size: 0.6rem; }
 
 
 /* Icons */
-
 ul.icons,
 ul.skill-icons,
 ul.experience-list {
 	cursor: default;
-	list-style: none;
-	padding-left: 0;
+	list-style-type: disc;
 }
 
 ul.icons li,
-ul.skill-icons li,
-ul.experience-list li {
+ul.skill-icons li {
 	display: inline-block;
-	padding: 0 0.75em 0 0;
+	padding: 0;
+	margin-bottom: 0.5em;
+}
+
+ul.experience-list li {
+	padding: 0;
+	margin-bottom: 0.7em;
 }
 
 ul.icons li:last-child,
@@ -197,6 +200,7 @@ ul.skill-icons li:last-child,
 ul.experience-list li:last-child {
 	padding-right: 0;
 }
+
 
 ul.icons li a {
 	border-radius: 100%;
@@ -217,7 +221,6 @@ ul.icons li a:active {
 }
 
 /* Wrapper */
-
 #wrapper {
 	display: flex;
 	flex-direction: column;
@@ -231,11 +234,8 @@ ul.icons li a:active {
 }
 
 @media screen and (max-width: 480px) {
-	#wrapper {
-			padding: 1rem;
-	}
+	#wrapper { padding: 1rem; }
 }
-
 
 /* Header */
 #header, #header .content .inner{
@@ -253,9 +253,7 @@ ul.icons li a:active {
 
 /* Shawna Edits	 */
 
-.sh-logo img {
-	filter: invert(100%);
-}
+.sh-logo img { filter: invert(100%); }
 
 .skill-icons {
 	display: flex;
@@ -264,15 +262,9 @@ ul.icons li a:active {
 	flex-wrap: wrap;
 }
 
-.skill-icons li {
-	list-style: none;
+.skill-icons li { list-style: none; }
 
-}
-
-.skill-icons li img {
-	height: 40px;
-} 
-
+.skill-icons li img { height: 40px; } 
 
 .application-grid {
 	display: grid;
@@ -311,9 +303,7 @@ ul.icons li a:active {
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-.flip-card:hover .flip-card-inner {
-	transform: rotateY(180deg);
-}	
+.flip-card:hover .flip-card-inner { transform: rotateY(180deg); }	
 
 .flip-card-front, .flip-card-back {
 	position: absolute;
@@ -328,9 +318,7 @@ ul.icons li a:active {
 	color: black;
 }
 
-.flip-card-front img {
-	filter: sepia(80%) saturate(50%) brightness(80%);
-}
+.flip-card-front img { filter: sepia(80%) saturate(50%) brightness(80%); }
 
 .flip-card-back {
 	cursor: pointer;
@@ -345,13 +333,17 @@ ul.icons li a:active {
 	font-size: 1.1rem;
 	font-weight: 600;
 }
-.project-details {
-	font-size: 75%;
-}
 
-.experience-item {
-	margin: 0 2rem;
-}
-.experience-list {
-	text-align: left	;
+.project-details { font-size: 75%; }
+.experience-item { margin: 0 2rem; }
+.experience-list { text-align: left; }
+
+@media screen and (max-width: 768px) {
+	.experience-contact, .body, .experience-item {
+		margin: 0;
+		padding: 0;
+	}
+	.experience-list > li {
+		padding-top: 2rem;
+	}
 }
