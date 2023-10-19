@@ -273,24 +273,35 @@ ul.icons li a:active {
 }
 
 .application-xlong {
-  grid-column: 1 / 4; 
-  background-image: url(../../images/hubble.jpg); 
-  padding: 1rem;
+	grid-column: 1 / 4;
+	background-image: url(../../images/hubble.jpg);
+	padding: 1rem;
 	border-radius: 5px;
 	border: 3px solid #3e4359;
 	font-size: 18px;
+	text-decoration: none; /* Remove underline from link */
+	color: inherit; /* Inherit color to ensure text visibility */
+	height: 150px; /* Fixed height to prevent resizing */
+	position: relative; /* To position inner content with respect to this container */
 }
 
-.hover-text {
+.default-text, .hover-content {
+	position: absolute;
+	top: 50%; /* Centering vertically */
+	left: 50%; /* Centering horizontally */
+	transform: translate(-50%, -50%); /* Ensures it's perfectly centered */
+}
+
+.hover-content {
+	display: none; /* Initially hidden */
+}
+
+.application-xlong:hover .default-text {
 	display: none;
 }
 
-.application-grid:hover .default-text {
-  display: none;
-}
-
-.application-grid:hover .hover-text {
-  display: block;
+.application-xlong:hover .hover-content {
+	display: block;
 }
 
 @media (max-width: 767px) {
