@@ -272,6 +272,27 @@ ul.icons li a:active {
 	grid-gap: 1rem;
 }
 
+.application-xlong {
+  grid-column: 1 / 4; 
+  background-image: url(../../images/hubble.jpg); 
+  padding: 1rem;
+	border-radius: 5px;
+	border: 3px solid #3e4359;
+	font-size: 18px;
+}
+
+.hover-text {
+	display: none;
+}
+
+.application-grid:hover .default-text {
+  display: none;
+}
+
+.application-grid:hover .hover-text {
+  display: block;
+}
+
 @media (max-width: 767px) {
 	.application-grid {
 		grid-template-columns: 1fr; /* Display elements in a single column */
