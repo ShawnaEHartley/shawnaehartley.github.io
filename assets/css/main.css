@@ -1,8 +1,11 @@
+/* BASE AND RESET STYLES */
+
 @import url(fontawesome-all.min.css);
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 
-/* RESET  */
+
+/* GLOBAL TYPOLOGY  */
 
 html::before {
 	content: "";
@@ -35,15 +38,19 @@ section, summary, time, mark, audio, video {
 	border: 0;
 	font-size: 100%;
 	font: inherit;
-	vertical-align: baseline;}
+	vertical-align: baseline;
+}
 
 article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-	display: block;}
+footer, header, hgroup, menu, nav, section { 
+	display: block; 
+}
 
 body { line-height: 1; }
 
-body h2 { margin-top: 40px; }
+body h2 { 
+	margin-top: 40px; 
+}
 
 body section {
 	text-align: center;
@@ -57,37 +64,39 @@ body section {
 	letter-spacing: 0.3rem;
 }
 
-ol, ul { list-style: none; }
+ol, ul { 
+	list-style: none; 
+}
 
-	html {
-		box-sizing: border-box;
-		font-size: 16pt;
-	}
+html {
+	box-sizing: border-box;
+	font-size: 16pt;
+}
 
-	*, *:before, *:after { box-sizing: inherit; }
+*, *:before, *:after { box-sizing: inherit; }
 
-	body, input, select, textarea {
-		color: #ffffff;
-		font-family: "Source Sans Pro", sans-serif;
-		font-weight: 300;
-		font-size: 1rem;
-		line-height: 1.65;
-	}
+body, input, select, textarea {
+	color: #ffffff;
+	font-family: "Source Sans Pro", sans-serif;
+	font-weight: 300;
+	font-size: 1rem;
+	line-height: 1.65;
+}
 
-	a {
-		text-decoration: none;
-		color: inherit;
-	}
-	
-	p { margin: 0 0 2rem 0; }
-	
-	h1, h2, h3, h4, h5, h6 {
-    color: #ffffff;
-    font-weight: 600;
-    line-height: 1.5;
-    margin: 0 0 1rem 0;
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
+a {
+	text-decoration: none;
+	color: inherit;
+}
+
+p { margin: 0 0 2rem 0; }
+
+h1, h2, h3, h4, h5, h6 {
+	color: #ffffff;
+	font-weight: 600;
+	line-height: 1.5;
+	margin: 0 0 1rem 0;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
 }
 
 h1 { font-size: 2.25rem; }
@@ -97,85 +106,95 @@ h4 { font-size: 0.8rem; }
 h5 { font-size: 0.7rem; }
 h6 { font-size: 0.6rem; }
 
-
-
-
 @media screen and (max-width: 767px) {
-    h1 { font-size: 1.5rem; }
-    h2 { font-size: 1.25rem; }
+	h1 { font-size: 1.5rem; }
+	h2 { font-size: 1.25rem; }
 }
 
-	
-	/* Icon */
-	
-	.icon {
-		text-decoration: none;
-		border-bottom: none;
-		position: relative;
-	}
-	
-	.icon:before {
-		display: inline-block;
-		font-style: normal;
-		font-variant: normal;
-		text-rendering: auto;
-		line-height: 1;
-		text-transform: none !important;
-		font-family: 'Font Awesome 5 Free';
-		font-weight: 400;
-	}
 
-	
-	.icon.brands:before {
-		font-family: 'Font Awesome 5 Brands';
-	}
-	
-	
-	.skill-icons a:hover {
-		border-radius: 3rem;
-		box-shadow: 0px 10px 8px 0px rgba(249, 247, 247, 0.1);
-	}
+/* WRAPPER */
+
+#wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	position: relative;
+	min-height: 100vh;
+	width: 100%;
+	padding: 4rem 2rem;
+	z-index: 3;
+}
+
+@media screen and (max-width: 980px) {
+	#wrapper { padding: 1rem;	}
+}
 
 
-/* List */
+/* ICONS AND LIST STYLES */
 
-	ol {
-		list-style: decimal;
-		margin: 0 0 2rem 0;
-		padding-left: 1.25em;
-	}
+/* ICONS */
+.icon {
+	text-decoration: none;
+	border-bottom: none;
+	position: relative;
+}
 
-		ol li {
-			padding-left: 0.25em;
-		}
+.icon:before {
+	display: inline-block;
+	font-style: normal;
+	font-variant: normal;
+	text-rendering: auto;
+	line-height: 1;
+	text-transform: none !important;
+	font-family: 'Font Awesome 5 Free';
+	font-weight: 400;
+}
 
-	ul {
-		list-style: disc;
-		margin: 0 0 2rem 0;
-		padding-left: 1em;
-	}
+.icon.brands:before {
+	font-family: 'Font Awesome 5 Brands';
+}
 
-		ul li {
-			padding-left: 0.5em;
-		}
+.skill-icons a:hover {
+	border-radius: 3rem;
+	box-shadow: 0px 10px 8px 0px rgba(249, 247, 247, 0.1);
+}
 
-		ul.alt {
-			list-style: none;
-			padding-left: 0;
-		}
+/* LISTS */
+ol {
+	list-style: decimal;
+	margin: 0 0 2rem 0;
+	padding-left: 1.25em;
+}
 
-			ul.alt li {
-				border-top: solid 1px #ffffff;
-				padding: 0.5em 0;
-			}
+ol li {
+	padding-left: 0.25em;
+}
 
-				ul.alt li:first-child {
-					border-top: 0;
-					padding-top: 0;
-				}
+ul {
+	list-style: disc;
+	margin: 0 0 2rem 0;
+	padding-left: 1em;
+}
 
+ul li {
+	padding-left: 0.5em;
+}
 
-/* Icons */
+ul.alt {
+	list-style: none;
+	padding-left: 0;
+}
+
+ul.alt li {
+	border-top: solid 1px #ffffff;
+	padding: 0.5em 0;
+}
+
+ul.alt li:first-child {
+	border-top: 0;
+	padding-top: 0;
+}
 
 ul.icons,
 ul.skill-icons,
@@ -220,25 +239,9 @@ ul.icons li a:active {
 	background-color: rgba(255, 255, 255, 0.175);
 }
 
-/* Wrapper */
 
-#wrapper {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-between;
-	position: relative;
-	min-height: 100vh;
-	width: 100%;
-	padding: 4rem 2rem;
-	z-index: 3;
-}
 
-@media screen and (max-width: 767px) {
-	#wrapper { padding: 1rem; }
-}
-
-/* Header */
+/* HEADER */
 #header, #header .content .inner{
 	display: flex;
 	flex-direction: column;
@@ -251,11 +254,14 @@ ul.icons li a:active {
 	padding: 10px 0; /* Adjust padding as needed for spacing around the name */
 }
 
-
-/* Shawna Edits	 */
-
 .sh-logo img { filter: invert(100%); }
 
+
+
+/* ABOUT ME SECTION */
+
+
+/* SKILLS SECTION */
 .skill-icons {
 	display: flex;
 	justify-content: space-around;
@@ -267,9 +273,12 @@ ul.icons li a:active {
 
 .skill-icons li img { height: 40px; } 
 
+
+/* APPLICATIONS SECTION */
+
 .application-grid {
 	display: grid;
-	grid-template-columns: repeat(3, min-content);
+	grid-template-columns: repeat(3, 1fr);
 	grid-gap: 1rem;
 }
 
@@ -308,7 +317,6 @@ ul.icons li a:active {
 .application-xlong:hover .hover-content {
 	display: block;
 }
-
 
 /* Flip Card Functionality */
 .flip-card {
@@ -377,6 +385,9 @@ ul.icons li a:active {
 		grid-column: auto;
 	}
 }
+
+
+/* EXPERIENCE SECTION */
 
 .experience-item { margin: 0 2rem; }
 .experience-list { text-align: left; }
