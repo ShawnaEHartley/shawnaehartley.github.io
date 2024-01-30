@@ -369,6 +369,8 @@ ul.icons li a:active {
 	transform: rotateY(180deg);
 	padding: 6%;
 	align-items: center;
+	overflow: auto;
+	max-height: 100%;
 }
 
 .project-title {
@@ -376,7 +378,10 @@ ul.icons li a:active {
 	font-weight: 600;
 }
 
-.project-details { font-size: 75%; }
+.project-details { 
+	font-size: 75%; 
+	margin-bottom: 0;
+}
 
 @media screen and (max-width: 767px) {
 	.application-grid {
