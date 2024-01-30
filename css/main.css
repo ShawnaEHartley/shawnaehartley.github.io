@@ -1,6 +1,6 @@
 /* BASE AND RESET STYLES */
 
-@import url(fontawesome-all.min.css);
+@import url('../lib/fontawesome/fontawesome-all.min.css');
 @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300italic,600italic,300,600");
 
 
@@ -9,7 +9,7 @@
 
 html::before {
 	content: "";
-	background-image: url("../../images/Natasha_flower_pic.jpeg");
+	background-image: url("../assets/images/Natasha_flower_pic.jpeg");
 	filter: brightness(0.5);
 	position: fixed; 
 	top: 0;
@@ -138,6 +138,7 @@ h6 { font-size: 0.6rem; }
 	text-decoration: none;
 	border-bottom: none;
 	position: relative;
+	color: white;
 }
 
 .icon:before {
@@ -151,7 +152,7 @@ h6 { font-size: 0.6rem; }
 	font-weight: 400;
 }
 
-.icon.brands:before {
+.icon.fab:before {
 	font-family: 'Font Awesome 5 Brands';
 }
 
