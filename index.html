@@ -213,6 +213,15 @@
 									</h3>
 								</div>
 
+								<script>
+									document.querySelectorAll('.flip-card').forEach(card => {
+										card.addEventListener('click', function() {
+											// When the card is clicked, find the .flip-card-back element and scroll to the top
+											this.querySelector('.flip-card-back').scrollTop = 0;
+										});
+									});
+								</script>
+
 							</div>
 						</section>
 
