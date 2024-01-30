@@ -208,7 +208,7 @@ ul.icons li,
 ul.skill-icons li {
 	display: inline-block;
 	padding: 0;
-	margin: 0 .8em .5em .8em;
+	margin: 0 .6em .5em .6em;
 }
 
 ul.experience-list li {
@@ -240,7 +240,12 @@ ul.icons li a:active {
 	background-color: rgba(255, 255, 255, 0.175);
 }
 
-
+@media (max-width: 600px) {
+	ul.icons li,
+	ul.skill-icons li {
+			margin: 0 0.1em; /* Smaller margin on small screens */
+	}
+}
 
 /* HEADER */
 #header, #header .content .inner{
