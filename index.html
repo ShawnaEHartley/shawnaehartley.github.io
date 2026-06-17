@@ -1,305 +1,384 @@
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shawna Hartley</title>
+  <meta name="description" content="Product person who builds and ships. I sit between the people with the problem and the people who build the fix." />
+  <meta property="og:title" content="Shawna Hartley" />
+  <meta property="og:description" content="Product thinking, shipped." />
+  <meta property="og:image" content="https://www.shawna.dev/assets/images/sh-logo-black.png" />
+  <meta property="og:type" content="website" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
-		<head>
-			<title>Shawna Hartley</title>
-			<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-			
-			<!-- Open Graph Meta Tags for Social Sharing -->
-			<meta property="og:title" content="Shawna Hartley">
-			<meta property="og:image" content="https://www.shawna.dev/assets/images/sh-logo-black.png">
-			<meta property="og:url" content="https://www.shawna.dev">
-			<meta property="og:type" content="website">
-	
-			<!-- Existing Styles and Favicon -->
-			<link rel="stylesheet" href="css/main.css" />
-			<link rel="icon" type="image/favicon" href="assets/images/sh-logo-black.png">
-	</head>
+    html { font-size: 16px; scroll-behavior: smooth; }
 
+    body {
+      background: #F6F7F7;
+      color: #1B2327;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      font-weight: 400;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-			<div id="wrapper">
+    .mono {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', 'Courier New', monospace;
+    }
 
-					<header id="header">
-						<div class="sh-logo">
-							<img src="assets/images/sh-logo-black.png">
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>Shawna Hartley</h1>
-								<ul class="icons">
-									<li><a href="http://gh.io/shawna" target="_blank" class="icon fab fa-github"></a></li>
-									<li><a href="https://www.linkedin.com/in/shawna-e-hartley/" target="_blank" class="icon brands fab fa-linkedin"></a></li>
-									<!-- <li><a href="https://drive.google.com/file/d/1-es0iz6IM5IDPZhksIIuzb-ScFFMb4Uz/view?usp=sharing" target="_blank" class="icon fa-file"></a></li> -->
-									<li><a href="mailto:shawna.e.hartley@gmail.com" target="_blank" class="icon fas fa-envelope"></a></li>
-									
-								</ul>
-							</div>
-						</div>
-					</header>
+    .wrap {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
 
-					<body>
-						<section class="about-me">
-							<h2>About Me</h2>
-								I create user-centered digital products.<br/>
-								With experience in product management,<br/>
-								client success, and software engineering,<br/>
-								I deliver solutions that meet real business needs.<br/>
-								<br/>
-								I&#8217;ve built my career at NielsenIQ and Compass Group,<br/>
-								and today I work at the intersection of business and engineering,<br/>
-								helping teams turn what clients need into what actually gets shipped.<br/>
-								<br/>
-								I&#8217;m drawn to fast-moving, AI-native companies<br/>
-								and to the clean energy transition &#8212;<br/>
-								two places where thoughtful technology can make a real difference.<br/>
-								<br/>
-								My focus is bridging the gap<br/>
-								between technical execution<br/>
-								and the people a product is built for.<br/>
-								<br/>
-								Let&#8217;s build something that lasts.<br/>
-						</section>
-						
+    /* ── Top bar ─────────────────────────────────────────── */
+    .topbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 22px 0;
+      border-bottom: 0.5px solid #DDE2E3;
+    }
 
-						
+    .monogram {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 33px;
+      height: 33px;
+      background: #1B2327;
+      border-radius: 7px;
+      color: #F6F7F7;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-decoration: none;
+      flex-shrink: 0;
+    }
 
-						<section class="applications">
-							<h2>Applications</h2>
-							<div class="application-grid">
+    .nav {
+      display: flex;
+      gap: 28px;
+    }
 
-								<div>
-									<div class="flip-card">
-										<div class="flip-card-inner">
-											<div class="flip-card-front">
-												<img src="assets/images/app_icons/crm.png" alt="Career Search CRM">
-											</div>
-											<div class="flip-card-back">
-												<a href="https://crm.shawna.dev" target="_blank">
-													<div class="project-title">Career Search CRM</div>
-													is a personal job search tracker built to manage companies, contacts, and conversations &#8212; with an AI digest that surfaces what to read and who to message each week.
-													<p class="project-details">
-														<br/>
-														Vanilla JS single-page app with localStorage persistence and Anthropic API integration. No backend.
-													</p>
-													<p class="project-date">&mdash; June 2026 &mdash;</p>
-												</a>
-											</div>
-										</div>
-									</div>
-									<h3>
-										<a href="https://crm.shawna.dev" target="_blank">Career Search CRM</a>
-									</h3>
-								</div>
+    .nav a {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 0.72rem;
+      letter-spacing: 0.07em;
+      color: #6B767B;
+      text-decoration: none;
+      transition: color 0.12s;
+    }
 
+    .nav a:hover { color: #16877A; }
 
-								<div>
-									<div class="flip-card">
-										<div class="flip-card-inner">
-											<div class="flip-card-front">
-												<img src="assets/images/app_icons/worldcup.png" alt="Where'd It Go?">
-											</div>
-											<div class="flip-card-back">
-												<a href="https://worldcup.shawna.dev" target="_blank">
-													<div class="project-title">Where'd It Go?</div>
-													is an interactive shot-placement visualization for World Cup and Euro tournaments, plotting where every shot crossed the goal line.
-													<p class="project-details">
-														<br/>
-														Vite + React + TypeScript with SVG rendering and a static StatsBomb data pipeline. Deployed on Vercel.
-													</p>
-													<p class="project-date">&mdash; June 2026 &mdash;</p>
-												</a>
-											</div>
-										</div>
-									</div>
-									<h3>
-										<a href="https://worldcup.shawna.dev" target="_blank">Where'd It Go?</a>
-									</h3>
-								</div>
+    /* ── Hero ────────────────────────────────────────────── */
+    .hero {
+      padding: 72px 0 64px;
+      position: relative;
+      overflow: hidden;
+    }
 
-								<div>
-									<div class="flip-card">
-										<div class="flip-card-inner">
-											<div class="flip-card-front">
-												<img src="assets/images/app_icons/hvac.png" alt="NYC Heat Study">
-											</div>
-											<div class="flip-card-back">
-												<a href="https://www.shawna.dev/hvac-temperature-study/" target="_blank">
-													<div class="project-title">NYC Heat Study</div>
-													is a data investigation into chronic overheating in a top-floor NYC apartment with PTAC units &#8212; 78 days of indoor sensor readings mapped against outdoor weather to document what the building's thermal envelope can and can't do.
-													<p class="project-details">
-														<br/>
-														Python data pipeline with pandas, Open-Meteo weather API, and a self-contained vanilla HTML/Canvas dashboard. No dependencies.
-													</p>
-													<p class="project-date">&mdash; June 2026 &mdash;</p>
-												</a>
-											</div>
-										</div>
-									</div>
-									<h3>
-										<a href="https://www.shawna.dev/hvac-temperature-study/" target="_blank">NYC Heat Study</a>
-									</h3>
-								</div>
+    .hero-eyebrow {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      color: #9BA4A8;
+      margin-bottom: 18px;
+    }
 
-								<div>
-									<div class="flip-card">
-										<div class="flip-card-inner">
-											<div class="flip-card-front">
-												<img src="assets/images/app_icons/shawnacss.png" alt="Shawna.CSS">
-											</div>
-											<div class="flip-card-back">
-												<a href="https://www.shawna.dev/shawnacss/" target="_blank">
-													<div class="project-title">Shawna.CSS</div>
-													is a CSS art project featuring illustrations and drawings created entirely in CSS — no images, no canvas.
-													<p class="project-details">
-														<br/>
-														Pure HTML and CSS. A creative exploration of what CSS can do as an artistic medium.
-													</p>
-													<p class="project-date">&mdash; Jan 2024 &mdash;</p>
-												</a>
-											</div>
-										</div>
-									</div>
-									<h3>
-										<a href="https://www.shawna.dev/shawnacss/" target="_blank">Shawna.CSS</a>
-									</h3>
-								</div>
+    .hero-name {
+      font-size: clamp(1.7rem, 5vw, 2.1rem);
+      font-weight: 500;
+      letter-spacing: -0.02em;
+      color: #1B2327;
+      line-height: 1.15;
+      margin-bottom: 16px;
+    }
 
-								<div>
-									<div class="flip-card">
-										<div class="flip-card-inner">
-											<div class="flip-card-front">
-												<img src="assets/images/app_icons/tripit.png" alt="TripIt">
-											</div>
-											<div class="flip-card-back">
-												<a href="https://trip-it.onrender.com/" target="_blank">
-													<div class=project-title>TripIt</div> 
-													is a full-stack application that allows users to create a trip itinerary and add activities to their trip.
-													<p class="project-details">
-														<br/>
-														A MERN stack application with a MongoDB database, Express and Node.js backend, and React frontend hosted on MongoDB Atlas and Render.
-													</p>
-													<p class="project-date">&mdash; March 2023 &mdash;</p>
-												</a>
-											</div>
-										</div>
-									</div>
-									<h3>
-										<a href="https://trip-it.onrender.com/" target="_blank">TripIt</a>
-									</h3>
-								</div>
+    .hero-tagline {
+      font-size: 1rem;
+      color: #4F5B61;
+      max-width: 440px;
+      line-height: 1.65;
+    }
 
-								<div>
-									<div class="flip-card">
-										<div class="flip-card-inner">
-											<div class="flip-card-front">
-												<img src="assets/images/app_icons/oh-the-places.png" alt="Oh! The Places">
-											</div>
-											<div class="flip-card-back">
-												<a href="https://shawnaehartley.github.io/Oh-The-Places-We-Go/" target="_blank">
-													<div class="project-title">Oh! The Places We Go</div>
-													is a frontend application that allows users to select a country and see population data fetched from a UN API.
-													<p class="project-details">
-														<br/>
-														A Vanilla DOM frontend with public API calls to the United Nations Population Division.
-													</p>
-													<p class="project-date">&mdash; Jan 2023 &mdash;</p>
-												</a>
-											</div>
-										</div>
-									</div>
-									<h3>
-										<a href="https://shawnaehartley.github.io/Oh-The-Places-We-Go/" target="_blank">Oh! The Places We Go</a>
-									</h3>
-								</div>
-								<script>
-									document.querySelectorAll('.flip-card').forEach(card => {
-										card.addEventListener('click', function() {
-											// When the card is clicked, find the .flip-card-back element and scroll to the top
-											this.querySelector('.flip-card-back').scrollTop = 0;
-										});
-									});
-								</script>
+    .hero-motif {
+      position: absolute;
+      top: 52px;
+      right: -8px;
+      opacity: 0.48;
+      pointer-events: none;
+    }
 
-							</div>
-						</section>
+    /* ── Divider sections ────────────────────────────────── */
+    .section {
+      padding: 52px 0;
+      border-top: 0.5px solid #DDE2E3;
+    }
 
-						<section class="skills">
-							<h2>Skills</h2>
-							<ul class="skill-icons">
-								<li>
-									<a href="https://docs.docker.com/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-docker-128.png" alt="Docker logo" title="Docker">
-									</a>
-								</li>
+    .section-label {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      color: #9BA4A8;
+      margin-bottom: 26px;
+    }
 
-								<li>
-									<a href="https://git-scm.com/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-git-100.png" alt="Git logo" title="Git">
-									</a>
-								</li>
+    /* ── About ───────────────────────────────────────────── */
+    .about-text {
+      font-size: 0.95rem;
+      color: #4F5B61;
+      max-width: 580px;
+      line-height: 1.85;
+    }
 
-								<li>
-									<a href="https://docs.github.com/en" target="_blank">
-										<img src="assets/images/skill_icons/icons8-github-128.png" alt="Github logo" title="GitHub">
-									</a>
-								</li>
+    /* ── Selected work ───────────────────────────────────── */
+    .work-list {
+      display: flex;
+      flex-direction: column;
+      gap: 32px;
+    }
 
-								<li>
-									<a href="https://rubyonrails.org/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-ruby-on-rails-128.png" alt="Ruby on Rails logo" title="Ruby on Rails">
-									</a>
-								</li>
+    .work-row {
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+      padding-bottom: 32px;
+      border-bottom: 0.5px solid #DDE2E3;
+    }
 
-								<li>
-									<a href="https://www.ruby-lang.org/en/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-ruby-100.png" alt="Ruby logo" title="Ruby">
-									</a>
-								</li>
+    .work-row:last-child {
+      padding-bottom: 0;
+      border-bottom: none;
+    }
 
-								<li>
-									<a href="https://www.javascript.com/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-javascript-128.png" alt="JavaScript logo" title="JavaScript">
-									</a>
-								</li>
+    .work-header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 16px;
+    }
 
-								<li>
-									<a href="https://react.dev" target="_blank">
-										<img src="assets/images/skill_icons/icons8-react-100.png" alt="React logo" title="React">
-									</a>
-								</li>
-								<li>
-									<a href="https://redux.js.org/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-redux-100.png" alt="Redux logo" title="Redux">
-									</a>
-								</li>
+    .work-title {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #1B2327;
+    }
 
-								<li>
-									<a href="https://www.mongodb.com/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-mongodb-144.png" alt="MongoDB logo" title="MongoDB">
-									</a>
-								</li>
+    .work-link {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      color: #16877A;
+      text-decoration: none;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: opacity 0.12s;
+    }
 
-								<li>
-									<a href="https://www.postgresql.org/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-postgresql-100.png" alt="PostgreSQL logo" title="PostgreSQL">
-									</a>
-								</li>
+    .work-link:hover { opacity: 0.7; }
 
-								<li>
-									<a href="https://www.css3.com/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-css3-128.png" alt="CSS logo" title="CSS">
-									</a>
-								</li>
+    .work-desc {
+      font-size: 0.875rem;
+      color: #4F5B61;
+      line-height: 1.55;
+    }
 
-								<li>
-									<a href="https://html.com/" target="_blank">
-										<img src="assets/images/skill_icons/icons8-html-5-128.png" alt="HTML logo" title="HTML">
-									</a>
-								</li>
-							</ul>
-						</section>
-					</body>
+    .work-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+      margin-top: 3px;
+    }
 
-			</div>
-	</body>
+    .tag {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.05em;
+      color: #8A9398;
+      border: 0.5px solid #D7DCDD;
+      border-radius: 2px;
+      padding: 2px 7px;
+    }
+
+    /* ── Earlier work ────────────────────────────────────── */
+    .earlier-text {
+      font-size: 0.875rem;
+      color: #6B767B;
+      line-height: 1.7;
+    }
+
+    .earlier-text a {
+      color: #16877A;
+      text-decoration: none;
+      font-size: 0.82rem;
+      transition: opacity 0.12s;
+    }
+
+    .earlier-text a:hover { opacity: 0.7; }
+
+    /* ── Footer ──────────────────────────────────────────── */
+    footer {
+      padding: 28px 0 44px;
+      border-top: 0.5px solid #DDE2E3;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 22px;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      font-family: 'SF Mono', 'Fira Code', 'Roboto Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.05em;
+      color: #8A9398;
+      text-decoration: none;
+      transition: color 0.12s;
+    }
+
+    .footer-links a:hover { color: #16877A; }
+
+    /* ── Responsive ──────────────────────────────────────── */
+    @media (max-width: 560px) {
+      .wrap { padding: 0 20px; }
+      .hero { padding: 52px 0 48px; }
+      .hero-motif { display: none; }
+      .nav { gap: 18px; }
+      .section { padding: 40px 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ── Top bar ───────────────────────────────────────── -->
+  <div class="wrap">
+    <nav class="topbar">
+      <a class="monogram" href="#">SH</a>
+      <div class="nav">
+        <a href="#work">work</a>
+        <a href="#about">about</a>
+        <a href="#contact">contact</a>
+      </div>
+    </nav>
+  </div>
+
+  <!-- ── Hero ──────────────────────────────────────────── -->
+  <div class="wrap">
+    <div class="hero">
+
+      <!-- node-and-connector motif -->
+      <svg class="hero-motif" width="148" height="118" viewBox="0 0 148 118" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <line x1="18" y1="34"  x2="98"  y2="14"  stroke="#BCC4C6" stroke-width="0.8"/>
+        <line x1="98" y1="14"  x2="134" y2="82"  stroke="#BCC4C6" stroke-width="0.8"/>
+        <line x1="18" y1="34"  x2="62"  y2="100" stroke="#BCC4C6" stroke-width="0.8"/>
+        <line x1="62" y1="100" x2="134" y2="82"  stroke="#BCC4C6" stroke-width="0.8"/>
+        <line x1="98" y1="14"  x2="62"  y2="100" stroke="#BCC4C6" stroke-width="0.8"/>
+        <line x1="18" y1="34"  x2="134" y2="82"  stroke="#BCC4C6" stroke-width="0.8" stroke-dasharray="3 4"/>
+        <circle cx="98"  cy="14"  r="4.5" fill="#16877A"/>
+        <circle cx="62"  cy="100" r="4.5" fill="#16877A"/>
+        <circle cx="18"  cy="34"  r="3.5" fill="#5E6B70"/>
+        <circle cx="134" cy="82"  r="3.5" fill="#5E6B70"/>
+      </svg>
+
+      <p class="hero-eyebrow mono">product · ai-native · distributed energy</p>
+      <h1 class="hero-name">Shawna Hartley</h1>
+      <p class="hero-tagline">I sit between the people with the problem and the people who build the fix.</p>
+    </div>
+  </div>
+
+  <!-- ── About ─────────────────────────────────────────── -->
+  <div class="wrap">
+    <section class="section" id="about">
+      <p class="section-label mono">about</p>
+      <p class="about-text">
+        I work at the intersection of business and engineering, turning what clients need into what actually ships.
+        I've built my career at NielsenIQ and Compass Group.
+        I'm drawn to fast-moving, AI-native companies and to the clean energy transition —
+        two places where thoughtful technology can make a real difference.
+        My focus is bridging the gap between technical execution and the people a product is built for.
+      </p>
+    </section>
+  </div>
+
+  <!-- ── Selected work ─────────────────────────────────── -->
+  <div class="wrap">
+    <section class="section" id="work">
+      <p class="section-label mono">selected work</p>
+      <div class="work-list">
+
+        <div class="work-row">
+          <div class="work-header">
+            <span class="work-title">Career Search CRM</span>
+            <a class="work-link mono" href="https://crm.shawna.dev" target="_blank" rel="noreferrer">view →</a>
+          </div>
+          <p class="work-desc">AI job-search tool that tracks companies, contacts, and conversations.</p>
+          <div class="work-tags">
+            <span class="tag mono">vanilla js</span>
+            <span class="tag mono">localStorage</span>
+            <span class="tag mono">anthropic api</span>
+          </div>
+        </div>
+
+        <div class="work-row">
+          <div class="work-header">
+            <span class="work-title">Where'd It Go?</span>
+            <a class="work-link mono" href="https://worldcup.shawna.dev" target="_blank" rel="noreferrer">view →</a>
+          </div>
+          <p class="work-desc">Shot-placement viz for World Cups &amp; Euros.</p>
+          <div class="work-tags">
+            <span class="tag mono">vite</span>
+            <span class="tag mono">react</span>
+            <span class="tag mono">ts</span>
+            <span class="tag mono">statsbomb pipeline</span>
+          </div>
+        </div>
+
+        <div class="work-row">
+          <div class="work-header">
+            <span class="work-title">NYC Heat Study</span>
+            <a class="work-link mono" href="https://www.shawna.dev/hvac-temperature-study/" target="_blank" rel="noreferrer">view →</a>
+          </div>
+          <p class="work-desc">78 days of sensor data vs. weather, documenting a building that won't cool.</p>
+          <div class="work-tags">
+            <span class="tag mono">python</span>
+            <span class="tag mono">pandas</span>
+            <span class="tag mono">canvas dashboard</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </div>
+
+  <!-- ── Earlier work ───────────────────────────────────── -->
+  <div class="wrap">
+    <section class="section">
+      <p class="section-label mono">earlier work</p>
+      <p class="earlier-text">
+        <a href="https://trip-it.onrender.com/" target="_blank" rel="noreferrer">TripIt</a>
+        &nbsp;·&nbsp;
+        <a href="https://shawnaehartley.github.io/Oh-The-Places-We-Go/" target="_blank" rel="noreferrer">Oh! The Places</a>
+        &nbsp;·&nbsp;
+        <a href="https://www.shawna.dev/shawnacss/" target="_blank" rel="noreferrer">Shawna.CSS</a>
+      </p>
+    </section>
+  </div>
+
+  <!-- ── Footer ────────────────────────────────────────── -->
+  <div class="wrap">
+    <footer id="contact">
+      <div class="footer-links">
+        <a href="https://github.com/ShawnaEHartley" target="_blank" rel="noreferrer">github</a>
+        <a href="https://www.linkedin.com/in/shawna-e-hartley/" target="_blank" rel="noreferrer">linkedin</a>
+        <a href="mailto:shawna.e.hartley@gmail.com">shawna.e.hartley@gmail.com</a>
+      </div>
+    </footer>
+  </div>
+
+</body>
 </html>
